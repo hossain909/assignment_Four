@@ -51,6 +51,6 @@ function getInputValueAndCost(id){
 function greeting(){
   document.getElementById("hide").style.display = "none";
   document.getElementById("greeting").style.display = "block";
-  // document.getElementById("firstClass").value = 0;
-  // document.getElementById("economy").value = 0;
+  document.getElementById("firstClass").value = 0;
+  document.getElementById("economy").value = 0;
 }
