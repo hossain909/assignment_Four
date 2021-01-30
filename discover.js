@@ -12,9 +12,7 @@ function ticketQuantityAndPriceHandler(ticketId,isIncrease){
   ticketInput.value = newCount;
   subTotal()
   total();
-  confirmation()
 }
-
 
 // ================ Update SubTotal Cost ================== //
 function subTotal() {
@@ -27,6 +25,7 @@ function subTotal() {
   document.getElementById("subTotal").innerText = subCost;
   return subCost;
 }
+
 // ================ Update Total Cost ================== //
 function total() {
   let totalCost;
@@ -36,6 +35,7 @@ function total() {
   document.getElementById("tax").innerText = tax;
   document.getElementById("total").innerText = totalCost;
 }
+
 // ================= Greeting Function ================= //
 function greeting(){
   document.getElementById("hide").style.display = "none";
