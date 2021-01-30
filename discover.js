@@ -14,16 +14,10 @@ function ticketQuantityAndPriceHandler(ticketId,isIncrease){
   total();
 }
 
-// ================ Update SubTotal Cost ================== //
-function subTotal() {
-  let subCost;
-  const firstInput = parseInt(document.getElementById("firstClass").value);
-  const firstClassTicketCost = firstInput * 150;
-  const economyInput = parseInt(document.getElementById("economy").value);
-  const economyTicketCost = economyInput * 100;
-  subCost = firstClassTicketCost + economyTicketCost;
-  document.getElementById("subTotal").innerText = subCost;
-  return subCost;
+function subTotal(){
+  const totalSub= getInputValueAndCost("firstClass") + getInputValueAndCost("economy");
+  document.getElementById("subTotal").innerText = totalSub;
+  return totalSub;
 }
 
 // ================ Update Total Cost ================== //
@@ -36,6 +30,19 @@ function total() {
   document.getElementById("total").innerText = totalCost;
 }
 
+// ================ Get Input Value Function  ================== //
+function getInputValueAndCost(id){
+  const inputValue = document.getElementById(id).value;
+  const inputValueNumber = parseInt(inputValue);
+  let ticketCost;
+  if(id == "firstClass"){
+    ticketCost = inputValueNumber * 150;
+  }
+  if(id == "economy"){
+    ticketCost = inputValueNumber * 100;
+  }
+  return ticketCost;
+}
 // ================= Greeting Function ================= //
 function greeting(){
   document.getElementById("hide").style.display = "none";
