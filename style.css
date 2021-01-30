@@ -150,6 +150,11 @@ nav ul li a:hover, a.active{
 #economy{
   font-size: 22px;
 }
+#greeting{
+  display: none; 
+  color: #fbc205; 
+  font-size: 30px;
+}
 .plus-minus-btn{
   cursor: pointer;
 }
