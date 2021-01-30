@@ -14,8 +14,11 @@ function ticketQuantityAndPriceHandler(ticketId,isIncrease){
   total();
 }
 
+// ================ SubTotal Function ================= //
 function subTotal(){
-  const totalSub= getInputValueAndCost("firstClass") + getInputValueAndCost("economy");
+  const firstClassTicketCost = getInputValueAndCost("firstClass");
+  const economyTicketCost = getInputValueAndCost("economy");
+  const totalSub = firstClassTicketCost + economyTicketCost;
   document.getElementById("subTotal").innerText = totalSub;
   return totalSub;
 }
@@ -43,8 +46,11 @@ function getInputValueAndCost(id){
   }
   return ticketCost;
 }
+
 // ================= Greeting Function ================= //
 function greeting(){
   document.getElementById("hide").style.display = "none";
   document.getElementById("greeting").style.display = "block";
+  // document.getElementById("firstClass").value = 0;
+  // document.getElementById("economy").value = 0;
 }
