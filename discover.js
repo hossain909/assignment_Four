@@ -21,8 +21,8 @@ function subTotal() {
   let subCost;
   const firstInput = parseInt(document.getElementById("firstClass").value);
   const firstClassTicketCost = firstInput * 150;
-  const ecoInput = parseInt(document.getElementById("economy").value);
-  const economyTicketCost = ecoInput * 100;
+  const economyInput = parseInt(document.getElementById("economy").value);
+  const economyTicketCost = economyInput * 100;
   subCost = firstClassTicketCost + economyTicketCost;
   document.getElementById("subTotal").innerText = subCost;
   return subCost;
@@ -36,7 +36,7 @@ function total() {
   document.getElementById("tax").innerText = tax;
   document.getElementById("total").innerText = totalCost;
 }
-
+// ================= Greeting Function ================= //
 function greeting(){
   document.getElementById("hide").style.display = "none";
   document.getElementById("greeting").style.display = "block";
